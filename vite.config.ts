@@ -9,5 +9,6 @@ export default defineConfig({
         reactRouter(),
         tsconfigPaths()
     ],
-    base: '/ocado-mini-store-app/',
+    base: process.env.NODE_ENV === 'production' ? '/ocado-mini-store-app/' : '/',
+
 });
