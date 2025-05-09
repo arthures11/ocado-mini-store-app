@@ -7,9 +7,9 @@ export default defineConfig({
     plugins: [
         tailwindcss(),
         reactRouter(),
-        tsconfigPaths()
+        tsconfigPaths(),
     ],
-    base: process.env.NODE_ENV === 'production' ? '/ocado-mini-store-app/' : '/',
-    //base: '/ocado-mini-store-app/',
+   //base: process.env.NODE_ENV === 'production' ? '/ocado-mini-store-app' : '/',
+    base: "/ocado-mini-store-app/",
 
 });

@@ -1,6 +1,6 @@
 import React from 'react';
-import { useNotification } from '../context/NotificationContext';
-import type {NotificationMessage} from '../types';
+import { useNotification } from '~/context/NotificationContext';
+import type {NotificationMessage} from '~/types';
 
 const NotificationItem: React.FC<{ notification: NotificationMessage; onDismiss: () => void }> = ({
                                                                                                       notification,

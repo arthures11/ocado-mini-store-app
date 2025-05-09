@@ -12,7 +12,7 @@ const OrderSummaryPage: React.FC = () => {
             <div className="container mx-auto p-4 text-center">
                 <h1 className="text-3xl font-bold mb-6">Order Summary</h1>
                 <p className="text-xl mb-4">Your cart is empty. Cannot proceed to summary.</p>
-                <Link to="/cart" className="text-blue-500 hover:text-blue-700 underline">
+                <Link to="/ocado-mini-store-app/cart" className="text-blue-500 hover:text-blue-700 underline">
                     Go to Cart
                 </Link>
             </div>
@@ -27,7 +27,7 @@ const OrderSummaryPage: React.FC = () => {
         };
         localStorage.setItem('finalizedOrder', JSON.stringify(orderDetails));
         clearCart();
-        window.location.href = '/order-confirmation';
+        window.location.href = '/ocado-mini-store-app/order-confirmation';
     };
 
     return (
@@ -55,7 +55,7 @@ const OrderSummaryPage: React.FC = () => {
                     </div>
                 </div>
                 <div className="mt-8 flex justify-between items-center">
-                    <Link to="/cart" className="text-blue-500 hover:text-blue-700 underline">
+                    <Link to="/ocado-mini-store-app/cart" className="text-blue-500 hover:text-blue-700 underline">
                         ← Back to Cart
                     </Link>
                     <button

@@ -1,8 +1,8 @@
 {
   "name": "ocado-mini-store-app",
+  "homepage": "https://arthures11.github.io/ocado-mini-store-app",
   "private": true,
   "type": "module",
-  "homepage": "https://arthures11.github.io/ocado-mini-store-app",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",

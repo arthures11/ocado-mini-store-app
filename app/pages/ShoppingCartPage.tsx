@@ -15,7 +15,7 @@ const ShoppingCartPage: React.FC = () => {
             <div className="container mx-auto p-4 text-center">
                 <h1 className="text-3xl font-bold mb-6">Shopping Cart</h1>
                 <p className="text-xl mb-4">Your cart is empty.</p>
-                <Link to="/" className="text-blue-500 hover:text-blue-700 underline">
+                <Link to="/ocado-mini-store-app" className="text-blue-500 hover:text-blue-700 underline">
                     Continue Shopping
                 </Link>
             </div>
@@ -94,11 +94,11 @@ const ShoppingCartPage: React.FC = () => {
                     </div>
                 </div>
                 <div className="mt-8 flex justify-between items-center">
-                    <Link to="/" className="text-blue-500 hover:text-blue-700 underline">
+                    <Link to="/ocado-mini-store-app" className="text-blue-500 hover:text-blue-700 underline">
                         ← Back to Product List
                     </Link>
                     <Link
-                        to="/order-summary"
+                        to="/ocado-mini-store-app/order-summary"
                         className="bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-6 rounded text-lg transition duration-150"
                     >
                         Proceed to Order Summary
