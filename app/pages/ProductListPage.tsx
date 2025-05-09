@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductCard from '../components/ProductCard';
-import productsData from '../products.json'; // Import the JSON data
+import productsData from '../products.json';
 import type {Product} from '../types';
 
 const ProductListPage: React.FC = () => {
