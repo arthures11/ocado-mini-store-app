@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import type {CartItemType, PriceFormat} from '../types';
 import { formatPriceDisplay, getPriceAsNumber } from '../utils/priceUtils';
-import {Link} from "react-router";
 
 interface FinalizedOrder {
     items: CartItemType[];
