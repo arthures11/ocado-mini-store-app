@@ -1,0 +1,116 @@
+{
+  "_CartContext-Ba5Dub5i.js": {
+    "file": "assets/CartContext-Ba5Dub5i.js",
+    "name": "CartContext",
+    "imports": [
+      "_chunk-D4RADZKF-5GD_Vqhz.js",
+      "_priceUtils-B0uR9NUr.js"
+    ]
+  },
+  "_NotificationContext-B_FCBjnG.js": {
+    "file": "assets/NotificationContext-B_FCBjnG.js",
+    "name": "NotificationContext",
+    "imports": [
+      "_chunk-D4RADZKF-5GD_Vqhz.js"
+    ]
+  },
+  "_chunk-D4RADZKF-5GD_Vqhz.js": {
+    "file": "assets/chunk-D4RADZKF-5GD_Vqhz.js",
+    "name": "chunk-D4RADZKF"
+  },
+  "_priceUtils-B0uR9NUr.js": {
+    "file": "assets/priceUtils-B0uR9NUr.js",
+    "name": "priceUtils"
+  },
+  "_with-props-DVVsAxuH.js": {
+    "file": "assets/with-props-DVVsAxuH.js",
+    "name": "with-props",
+    "imports": [
+      "_chunk-D4RADZKF-5GD_Vqhz.js"
+    ]
+  },
+  "app/pages/OrderSummaryPage.tsx?__react-router-build-client-route": {
+    "file": "assets/OrderSummaryPage-BH8qiv67.js",
+    "name": "OrderSummaryPage",
+    "src": "app/pages/OrderSummaryPage.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-DVVsAxuH.js",
+      "_chunk-D4RADZKF-5GD_Vqhz.js",
+      "_CartContext-Ba5Dub5i.js",
+      "_priceUtils-B0uR9NUr.js"
+    ]
+  },
+  "app/pages/ProductListPage.tsx?__react-router-build-client-route": {
+    "file": "assets/ProductListPage-Cv-ze6Lz.js",
+    "name": "ProductListPage",
+    "src": "app/pages/ProductListPage.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-DVVsAxuH.js",
+      "_chunk-D4RADZKF-5GD_Vqhz.js",
+      "_CartContext-Ba5Dub5i.js",
+      "_priceUtils-B0uR9NUr.js",
+      "_NotificationContext-B_FCBjnG.js"
+    ]
+  },
+  "app/pages/ShoppingCartPage.tsx?__react-router-build-client-route": {
+    "file": "assets/ShoppingCartPage-BYZ8cYq9.js",
+    "name": "ShoppingCartPage",
+    "src": "app/pages/ShoppingCartPage.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-DVVsAxuH.js",
+      "_chunk-D4RADZKF-5GD_Vqhz.js",
+      "_CartContext-Ba5Dub5i.js",
+      "_priceUtils-B0uR9NUr.js",
+      "_NotificationContext-B_FCBjnG.js"
+    ]
+  },
+  "app/root.tsx?__react-router-build-client-route": {
+    "file": "assets/root-v1ozI0Km.js",
+    "name": "root",
+    "src": "app/root.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-DVVsAxuH.js",
+      "_chunk-D4RADZKF-5GD_Vqhz.js"
+    ],
+    "css": [
+      "assets/root-DXP1kZbK.css"
+    ]
+  },
+  "app/routes/OrderConfirmationPage.tsx?__react-router-build-client-route": {
+    "file": "assets/OrderConfirmationPage-BiAoTStM.js",
+    "name": "OrderConfirmationPage",
+    "src": "app/routes/OrderConfirmationPage.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-DVVsAxuH.js",
+      "_chunk-D4RADZKF-5GD_Vqhz.js",
+      "_priceUtils-B0uR9NUr.js"
+    ]
+  },
+  "app/routes/home.tsx?__react-router-build-client-route": {
+    "file": "assets/home-DgvAIySu.js",
+    "name": "home",
+    "src": "app/routes/home.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_with-props-DVVsAxuH.js",
+      "_chunk-D4RADZKF-5GD_Vqhz.js",
+      "_CartContext-Ba5Dub5i.js",
+      "_NotificationContext-B_FCBjnG.js",
+      "_priceUtils-B0uR9NUr.js"
+    ]
+  },
+  "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx": {
+    "file": "assets/entry.client-CyJt58eN.js",
+    "name": "entry.client",
+    "src": "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_chunk-D4RADZKF-5GD_Vqhz.js"
+    ]
+  }
+}
