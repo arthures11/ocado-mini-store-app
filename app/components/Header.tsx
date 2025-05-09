@@ -9,8 +9,7 @@ const Header: React.FC = () => {
 
     }
     else{
-        cartItems.reduce((sum, item) => sum + item.quantity, 0);
-
+        itemCount = cartItems.reduce((sum, item) => sum + item.quantity, 0);
     }
 
     return (
