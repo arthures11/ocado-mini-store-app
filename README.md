@@ -1,87 +1,104 @@
-# Welcome to React Router!
+# Artur_Bryja_Web_Wrocław 
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A small, frontend-only React, TypeScript, and Tailwind CSS application that allows users to browse products, add/remove them from a shopping cart, and simulate an order placement process.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+**Live Demo:** [https://arthures11.github.io/ocado-mini-store-app/](https://arthures11.github.io/ocado-mini-store-app/)
 
 ## Features
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+*   **Product Listing:** Displays a static list of products with names, prices, and images.
+*   **Shopping Cart:**
+    *   Add products to the cart.
+    *   View items in the cart (name, quantity, price).
+    *   Increase/decrease item quantity.
+    *   Remove items from the cart.
+    *   Displays subtotal per item and total cart cost.
+*   **Order Summary:** Review cart items and total cost before "placing" an order.
+*   **Order Confirmation:** A dedicated page confirming the order details after placement.
+*   **Responsive Design:** Basic responsiveness with Tailwind CSS.
+*   **Client-Side State:** Uses React Context API and `localStorage` to persist cart data.
+*   **Notifications:** Displays a small alert when an item is added to the cart.
+*   **Client-Side Routing:** Uses `react-router-dom` for page navigation.
 
-## Getting Started
+## Tech Stack
 
-### Installation
+*   **React 18+**
+*   **TypeScript**
+*   **Tailwind CSS 3+**
+*   **React Router DOM v6+** (for client-side routing)
+*   **Vite** (as the build tool - *adjust if using Create React App*)
+*   **UUID** (for unique ID generation for notifications)
+*   **gh-pages** (for deployment to GitHub Pages)
 
-Install the dependencies:
 
-```bash
-npm install
-```
+## Setup and Installation
 
-### Development
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/arthures11/ocado-mini-store-app.git
+    cd ocado-mini-store-app
+    ```
 
-Start the development server with HMR:
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-```bash
-npm run dev
-```
+## Available Scripts
 
-Your application will be available at `http://localhost:5173`.
+In the project directory, you can run:
 
-## Building for Production
+*   **`npm run dev`**
+    Runs the app in development mode using Vite.
+    Open [http://localhost:5173](http://localhost:5173) (or the port Vite chooses) to view it in the browser.
+    The page will reload if you make edits.
 
-Create a production build:
+*   **`npm run build`**
+    Builds the app for production to the `dist` folder (for Vite) or `build` folder (for CRA).
+    It correctly bundles React in production mode and optimizes the build for the best performance.
 
-```bash
-npm run build
-```
+## Deployment to GitHub Pages
 
-## Deployment
+This project is configured for easy deployment to GitHub Pages.
 
-### Docker Deployment
+1.  **Update `package.json`:**
+    Set the `homepage` field to `https://arthures11.github.io/ocado-mini-store-app/`.
 
-To build and run using Docker:
+2.  **Update `vite.config.ts`:**
+    Set the `base` property in `defineConfig` to `/ocado-mini-store-app/`.
 
-```bash
-docker build -t my-app .
+    ```typescript
+    // vite.config.ts
+    import { defineConfig } from 'vite'
+    // ... other imports
+    export default defineConfig({
+      // ... plugins
+      base: '/ocado-mini-store-app/',
+    })
+    ```
 
-# Run the container
-docker run -p 3000:3000 my-app
-```
+3.  **Run the deploy script:**
+    ```bash
+    npm run deploy
+    ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
+4.  **Configure GitHub Repository Settings:**
+    *   Go to your repository on GitHub > Settings > Pages.
+    *   Set the source to the `gh-pages` branch and the folder to `/ (root)`.
+    *   Your site should be live shortly at the URL specified in your `homepage` field.
 
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
+## State Management
 
-### DIY Deployment
+*   **Cart State:** Managed via `CartContext` (`src/context/CartContext.tsx`). Cart items are persisted in `localStorage` under the key `shoppingCart`.
+*   **Notification State:** Managed via `NotificationContext` (`src/context/NotificationContext.tsx`). Notifications are transient and not persisted.
+*   **Order Data for Confirmation:** When an order is "placed", details are temporarily stored in `localStorage` under the key `finalizedOrder` to be read by the confirmation page, then cleared.
 
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
+## Further Improvements (Future Considerations)
 
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+*   Add unit and integration tests.
+*   Implement more sophisticated state management (e.g., Redux Toolkit, Zustand) if complexity grows.
+*   Connect to a real backend API for products and orders.
+*   Add user authentication.
+*   Enhance styling and user experience.
+*   Improve accessibility.
+*   Form validation for any future input fields.
