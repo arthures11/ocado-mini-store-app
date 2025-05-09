@@ -2,11 +2,14 @@
   "name": "ocado-mini-store-app",
   "private": true,
   "type": "module",
+  "homepage": "https://arthures11.github.io/ocado-mini-store-app",
   "scripts": {
     "build": "react-router build",
     "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
-    "typecheck": "react-router typegen && tsc"
+    "typecheck": "react-router typegen && tsc",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@react-router/node": "^7.5.3",
@@ -24,6 +27,7 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@types/uuid": "^10.0.0",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4.1.6",
     "typescript": "^5.8.3",
     "vite": "^6.3.3",
