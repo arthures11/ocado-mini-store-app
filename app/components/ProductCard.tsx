@@ -13,8 +13,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     const { addNotification } = useNotification();
 
     const handleAddToCart = () => {
-        addToCart(product);
         addNotification(`${product.name} added to cart!`, 'success');
+        addToCart(product);
     };
 
     return (
@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
             <p className="text-gray-700 text-lg mb-4">${formatPriceDisplay(product.price)}</p>
             <button
-                onClick={() => handleAddToCart}
+                onClick={() => handleAddToCart()}
                 className="mt-auto bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-150"
             >
                 Add to Cart
