@@ -9,4 +9,5 @@ export default defineConfig({
         reactRouter(),
         tsconfigPaths()
     ],
+    base: '/ocado-mini-store-app/',
 });
