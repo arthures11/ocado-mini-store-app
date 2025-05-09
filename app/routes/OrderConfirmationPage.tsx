@@ -33,12 +33,11 @@ const OrderConfirmationPage: React.FC = () => {
             <div className="container mx-auto p-6 text-center">
                 <h1 className="text-3xl font-bold text-red-600 mb-4">Order Confirmation Issue</h1>
                 <p className="text-xl text-white mb-6">{error}</p>
-                <Link
-                    to="/"
+                <button onClick={() => window.location.href = '/'}
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded text-lg transition duration-150 inline-block"
                 >
                     Back to Product List
-                </Link>
+                </button>
             </div>
         );
     }
@@ -48,12 +47,11 @@ const OrderConfirmationPage: React.FC = () => {
             <div className="container mx-auto p-6 text-center">
                 <h1 className="text-3xl font-bold mb-4">Loading Order Confirmation...</h1>
                 <p>If this takes too long, please try returning to the product list.</p>
-                <Link
-                    to="/"
+                <button onClick={() => window.location.href = '/'}
                     className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded text-lg transition duration-150 inline-block"
                 >
                     Back to Product List
-                </Link>
+                </button>
             </div>
         );
     }
@@ -86,12 +84,11 @@ const OrderConfirmationPage: React.FC = () => {
 
             <p className="text-lg mb-6">Thank you for your purchase. Order placed at: {new Date(orderDetails.timestamp).toLocaleString()}</p>
 
-            <Link
-                to="/"
+            <button onClick={() => window.location.href = '/'}
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded text-lg transition duration-150 inline-block"
             >
                 Back to Product List
-            </Link>
+            </button>
         </div>
     );
 };
