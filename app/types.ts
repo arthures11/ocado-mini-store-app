@@ -7,7 +7,6 @@ export interface Product {
     id: number;
     name: string;
     price: PriceFormat;
-    imageUrl?: string;
 }
 
 export interface CartItemType extends Product {
