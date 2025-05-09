@@ -21,3 +21,16 @@ export interface CartContextType {
     clearCart: () => void;
     getTotalCost: () => number;
 }
+
+
+export interface NotificationMessage {
+    id: string;
+    message: string;
+    type: 'success' | 'error' | 'info';
+}
+
+export interface NotificationContextType {
+    notifications: NotificationMessage[];
+    addNotification: (message: string, type?: NotificationMessage['type']) => void;
+    removeNotification: (id: string) => void;
+}
