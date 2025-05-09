@@ -19,10 +19,10 @@ const Header: React.FC = () => {
                 <nav>
                     <ul className="flex space-x-6 items-center">
                         <li>
-                            <Link to="/" className="hover:text-gray-300">Product List</Link>
+                            <Link to="/ocado-mini-store-app" className="hover:text-gray-300">Product List</Link>
                         </li>
                         <li>
-                            <Link to="/cart" className="relative hover:text-gray-300">
+                            <Link to="/ocado-mini-store-app/cart" className="relative hover:text-gray-300">
                                 Shopping Cart
                                 {itemCount > 0 && (
                                     <span className="absolute -top-2 -right-3 bg-red-500 text-xs text-white rounded-full h-5 w-5 flex items-center justify-center">
