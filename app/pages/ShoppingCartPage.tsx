@@ -3,9 +3,13 @@ import { useCart } from '../context/CartContext';
 import type {CartItemType} from '../types';
 import { formatPriceDisplay, getPriceAsNumber } from '../utils/priceUtils';
 import {Link} from "react-router";
+import {useNotification} from "~/context/NotificationContext";
 
 const ShoppingCartPage: React.FC = () => {
     const { cartItems, removeFromCart, updateQuantity, getTotalCost } = useCart();
+    const { addNotification } = useNotification();
+
+
         if (!(cartItems && cartItems.length > 0)) {
         return (
             <div className="container mx-auto p-4 text-center">
@@ -22,7 +26,13 @@ const ShoppingCartPage: React.FC = () => {
         const quantity = Math.max(0, newQuantity);
         if (quantity === 0) {
             removeFromCart(item.id);
+            addNotification(`successfully removed ${item.name}!`, 'success');
         } else {
+            if(quantity > item.quantity)
+                addNotification(`added +1 ${item.name} successfully!`, 'success');
+            else
+                addNotification(`lowered the amount of ${item.name}`, 'success');
+
             updateQuantity(item.id, quantity);
         }
     };
@@ -68,7 +78,7 @@ const ShoppingCartPage: React.FC = () => {
                             </div>
                             <div className="w-1/5 text-right">
                                 <button
-                                    onClick={() => removeFromCart(item.id)}
+                                    onClick={() => handleQuantityChange(item, 0)}
                                     className="text-red-500 hover:text-red-700 font-semibold"
                                 >
                                     Remove

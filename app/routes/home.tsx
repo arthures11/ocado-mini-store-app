@@ -1,12 +1,16 @@
 import {CartProvider} from "~/context/CartContext";
 import Header from "~/components/Header";
 import {Outlet} from "react-router";
+import {NotificationProvider} from "~/context/NotificationContext";
+import NotificationDisplay from "~/components/NotificationDisplay";
 
 
 export default function Home() {
     return (
         <CartProvider>
-            <div className="flex flex-col min-h-screen bg-gray-100">
+            <NotificationProvider>
+                <NotificationDisplay />
+                <div className="flex flex-col min-h-screen bg-gray-100">
                 <Header />
                 <main className="flex-grow">
                     <Outlet />
@@ -15,6 +19,7 @@ export default function Home() {
                     © {new Date().getFullYear()} My Awesome Shop
                 </footer>
             </div>
+          </NotificationProvider>
         </CartProvider>
     );
 }
